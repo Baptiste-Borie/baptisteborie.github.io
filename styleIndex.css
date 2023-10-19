@@ -9,26 +9,22 @@ html, body{
 html {
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
-    background-repeat: no-repeat;
 }
 
 body {
     font-family: Roboto;
 }
-/* 
-.dot{
-    position: fixed;
-    background-color: blue;
-} */
+
+h2{
+    text-transform: uppercase;
+}
 
 .section {
     height: 100vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display : grid;
+    grid-template-columns: 5fr 1fr;
 } 
 nav{
     position: fixed;
@@ -36,14 +32,29 @@ nav{
     color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
+    width: 100vw;
+    backdrop-filter: blur(10px);
+}
+.navColor{
+    border : 1px solid #15192c;
+    background-color : rgba(8, 6, 32, 1);
+    z-index: 100;
 }
 nav ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
+    height: 10vh;
     gap: 1em;
 }
 nav li:first-child {
     margin-right: 65em;
+}
+.welcome{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 .about{
     background: linear-gradient(-45deg, rgba(2,0,36,1), rgb(51, 4, 146),rgb(85, 0, 255), rgb(166, 0, 255));
@@ -62,9 +73,50 @@ nav li:first-child {
     }
     
 }
+.about h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10em;
+    margin: 0;
+}
+.welcome div {  
+    margin :0;
+    width: 25%;
+    text-align:center;
+
+}
 .work{
-    background-color: green ;
+    background-color: rgba(8, 6, 32, 1);
+}
+.tiles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 .contact{
     background-color: blue;
 }
+
+.dot{
+    order : 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top : 22vh;
+    padding: 0;
+    height: 50vh;
+    position: relative;
+}
+.dot > *{
+    border : 5px solid black;
+    border-radius: 999px;
+    background-color: black;
+    margin-bottom: 20px;    
+}
+
+.selected {
+    border: 6px solid white;
+}
+
