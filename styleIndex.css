@@ -157,7 +157,7 @@ text-align: justify;
 .contact{
     background-color: rgba(8, 6, 32, 1);;
 }
-.titleSection{
+.titleSection{ 
     color: white;
     position: relative;
     display: flex;
