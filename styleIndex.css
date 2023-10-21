@@ -19,6 +19,11 @@ h2{
     text-transform: uppercase;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 .section {
     height: 100vh;
     scroll-snap-align: start;
@@ -35,11 +40,16 @@ nav{
     width: 100vw;
     backdrop-filter: blur(10px);
 }
-.navColor{
-    border : 1px solid #15192c;
-    background-color : rgba(8, 6, 32, 1);
+.navColor {
+    border-bottom: 1px solid #15192c;
+    display: flex;
+    align-items: center;
+    background-color: rgba(8, 6, 32, 1);
     z-index: 100;
 }
+
+
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -55,6 +65,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+text-align: justify;
 }
 .about{
     background: linear-gradient(-45deg, rgba(2,0,36,1), rgb(51, 4, 146),rgb(85, 0, 255), rgb(166, 0, 255));
@@ -94,9 +105,6 @@ align-items: center;
     align-items: center;
     color: white;
 }
-.contact{
-    background-color: blue;
-}
 
 .dot{
     order : 1;
@@ -120,3 +128,42 @@ align-items: center;
     border: 6px solid white;
 }
 
+.progressDotsBox {
+    order :1 ;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progressDots {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: black;
+    transition: background-color 0.3s ease; /* Animation de transition de la couleur de fond */
+}
+
+.progressDots.active {
+    background-color: white;
+}
+
+.contact{
+    background-color: rgba(8, 6, 32, 1);;
+}
+.titleSection{
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top  : 2em;
+    height: 35vh;
+}

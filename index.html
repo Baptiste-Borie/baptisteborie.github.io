@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptiste Borie</title>
     <link rel="stylesheet" href="styleIndex.css">
-    
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
 </head>
+
 <body>
-    <nav id ="nav">
+    <nav id="nav">
         <ul>
             <li>
                 <div>
-                    Baptiste Borie 
+                    Baptiste Borie
                 </div>
             </li>
             <li>
-                <div>Me</div>
+                <div><a href="me.html">Me</a></div>
             </li>
             <li>
-                <div>Work</div>
+                <div><a href="#work">Work</a></div>
             </li>
             <li>
-                <div>Contact</div>
+                <div><a href="#contact">Contact</a></div>
             </li>
         </ul>
-    </nav>      
+    </nav>
     <div class="mainScreen">
+        <div class="progressDotsBox">
+            <div class="progressDots active"></div>
+            <div class="progressDots"></div>
+            <div class="progressDots"></div>
+        </div>        
         <div class="section about">
-            <div class ="dot">
-                <div class =" selected"></div>
-                <div></div>
-                <div></div>
+            <div class="welcome" id ="welcome">
+                    <h2>Welcome</h2>
+                    <div>
+                        Hi i'm Baptiste Borie. Student in computer science you will find on this website a showcase of my
+                        work and my universe.
+                    </div>
+                </div>
             </div>
-            <div class ="welcome">
-                <h2>Welcome</h2>
-                <div>
-                    Hi i'm Baptiste Borie. Student in computer science you will find on this website a showcase of my work and my universe.
+            <div class="section work" id = work>
+                <div class ="titleSection">
+                    <h2>My work</h2>
+                    <div>
+                        You can find here some creations that I have made.
+                    </div>
+                </div>
+                <div class="tiles">
+                </div>
+            </div>
+            <div class="section contact" id = "contact">
+                <div class = "titleSection">
+                    <div>
+                        <H2>Contact Me </H2>
+                    </div>
+                    <div> 
+                        Feel free to contact me for any informations ! 
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="section work">
-            <div class ="dot">
-                <div></div>
-                <div class =" selected"></div>
-                <div></div>
-            </div>
-            <div class="tiles">
-                <h2>My work</h2>
-                <div>
-                    HYou can find here some creations that I have made.
-                </div>
-            </div>
-        </div>
-        <div class="section contact">
-            <div class ="dot">
-                <div></div>
-                <div></div>
-                <div class =" selected"></div>
-            </div>
-            <div>
-                test
-            </div>
-    </div>
-    <script src="scriptIndex.js" type = "module"></script>
+            <script src="scriptIndex.js" type="module"></script>
 </body>
+
 </html>
