@@ -74,7 +74,7 @@ align-items: center;
 text-align: justify;
 }
 .about{
-    background: linear-gradient(-45deg, rgba(2,0,36,1), rgb(51, 4, 146),rgb(85, 0, 255), rgb(166, 0, 255));
+    background: linear-gradient(-45deg, rgb(5, 1, 69), rgb(82, 8, 230),rgb(85, 0, 255), rgb(170, 26, 247));
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
 }
