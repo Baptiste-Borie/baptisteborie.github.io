@@ -52,10 +52,16 @@ nav{
 
 nav ul {
     list-style-type: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr 1fr;
     align-items: center;
     height: 10vh;
     gap: 1em;
+}
+nav li {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
 }
 nav li:first-child {
     margin-right: 65em;
