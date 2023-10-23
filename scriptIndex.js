@@ -71,4 +71,10 @@ function setActiveIndicator(index) {
     });
 }
 
+/* Formulaire error */
+var form = document.getElementById("form")
+form.addEventListener('submit',function(event){
+    event.preventDefault();
+    alert(" This section is currently empty and doesnt work cause PHP or any server-side languages is not supported on GITHUB Pages. You can still reach me at baptisteboriepro@gmail.com");
+})
 
