@@ -13,18 +13,27 @@ body{
     align-items: center ;
 }
 
-.title h1 {
-    display: flex;
+.title nav {
+    display: grid;
     text-transform: uppercase;
+    grid-template-columns: 1fr 10fr;
     letter-spacing: 1px;
-    justify-content: center;
-    align-content: center;
     margin :0;
     width: 100vw;
     padding-top: 1em ;
     padding-bottom: 1em;
     color :white ;
+    user-select: none;
     background-color: #262626;
+}
+.title h1{
+    display :flex;
+    justify-content: center;
+    transform: translateX(-5%);
+}
+.title #home{
+    margin-left: 1em;
+    cursor: pointer;
 }
 .title div {
     margin-top: 20px;

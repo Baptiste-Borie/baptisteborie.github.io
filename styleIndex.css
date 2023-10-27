@@ -167,10 +167,10 @@ text-align: justify;
     transition: transform 0.3s;
 }
 .image {
-    width: 15em;
+    width: 205px;
     height: 20em;
     object-fit: cover;
-    object-position: center;
+    object-position: center ;
     opacity: 1;
 }
 .imageContainer:first-child{
@@ -178,17 +178,35 @@ text-align: justify;
 }
 .imageContext {
     background-color: rgba(41, 33, 33, 0.5);
-    width: 15em;
+    color: white;
     height: 325px;
+    width: 205px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items:center;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+.imageContext h4 {
+    font-size: 1.5em;
+    text-transform: uppercase;
 }
 .imageContainer:hover > .imageContext{
     transition: 0.5s;
     transform: translateY(-100%);
 }
+.imageContainer:not(:hover) > .imageContext{
+    transition: 0.5s;
+    transform: translateY(100%);
+}   
+#trait{
+    width: 50px;
+    border: 1px solid white;
+    margin-bottom: 5px;
+}
+
 
 .imageContainer {
     padding: 0;
@@ -197,20 +215,6 @@ text-align: justify;
     height: 320px;
 }
 
-.bouton-redirection {
-    background-color: rgb(85, 0, 255);
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border : 0;
-    width: 100px;
-    border-radius: 8px;
-    padding: 20px;
-    margin-top: 20px;
-}
-.bouton-redirection:active {
-    background-color: rgb(54, 26, 110);
-}
 /*  ------------------------------ CONTACT  ------------------------------  */
 
 .contact{

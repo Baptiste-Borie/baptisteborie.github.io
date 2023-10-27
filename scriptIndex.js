@@ -79,15 +79,13 @@ form.addEventListener('submit',function(event){
 })
 
 /* Bouton de contexte d'image */
-var boutons = document.querySelectorAll(".bouton-redirection");
+
+var imageContainers = document.querySelectorAll(".imageContainer");
 
 // Ajoutez un gestionnaire d'événements pour chaque bouton
-boutons.forEach(function(bouton) {
-    console.log("dd");
-    bouton.addEventListener("click", function() {
-        setTimeout(function(){
-            var url = bouton.getAttribute("data-url");
-            window.location.href = url;
-        },50)
+imageContainers.forEach(function(container) {
+    container.addEventListener("click", function() {
+        var url = container.getAttribute("data-url");
+        window.location.href = url;
     });
 });

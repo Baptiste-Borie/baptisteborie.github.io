@@ -13,3 +13,9 @@ boutons.forEach((bouton, index) => {
 
 const button6 = document.querySelector('.button6');
 button6.textContent ="" ;
+
+var home = document.getElementById("home")
+console.log(home)
+home.addEventListener("click",function(){
+    window.location.href = "../"
+});
