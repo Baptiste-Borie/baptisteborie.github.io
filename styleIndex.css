@@ -1,3 +1,4 @@
+/* ------------------------------ GENERAL  ------------------------------ */
 :root{
     --main-blue : rgba(8, 6, 32, 1);
     --lightblue : #15192c;
@@ -57,8 +58,6 @@ nav{
     z-index: 100;
 }
 
-
-
 nav ul {
     list-style-type: none;
     display: grid;
@@ -75,56 +74,17 @@ nav li {
 nav li:first-child {
     margin-right: 65em;
 }
-.welcome{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: justify;
-}
-.about{
-    background: linear-gradient(-45deg, rgb(5, 1, 69), rgb(82, 8, 230),rgb(85, 0, 255), rgb(170, 26, 247));
-    background-size: 400% 400%;
-    animation: gradient 8s ease infinite;
-}
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-    
-}
-.about h2{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 10em;
-    margin: 0;
-}
-.welcome div {  
-    margin :0;
-    width: 25%;
-    text-align:center;
-
-}
-.work{
-    background-color: rgba(8, 6, 32, 1);
-}
-.tiles {
+.titleSection{ 
+    color: white;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    top  : 2em;
+    height: 35vh;
 }
-
-.selected {
-    border: 6px solid white;
-}
-
+/*  ------------------------------ PROGRESS DOTS ------------------------------  */
 .progressDotsBox {
     order :1 ;
     position: fixed;
@@ -151,6 +111,71 @@ text-align: justify;
 .progressDots.active {
     background-color: white;
 }
+.selected {
+    border: 6px solid white;
+}
+/*  ------------------------------ ABOUT  ------------------------------  */
+.about{
+    background: linear-gradient(-45deg, rgb(5, 1, 69), rgb(82, 8, 230),rgb(85, 0, 255), rgb(170, 26, 247));
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    
+}
+.welcome{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: justify;
+}
+.about h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10em;
+    margin: 0;
+}
+.welcome div {  
+    margin :0;
+    width: 25%;
+    text-align:center;
+    
+}
+
+/*  ------------------------------ WORK  ------------------------------  */
+.work{
+    background-color: rgba(8, 6, 32, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+#imageTrack{
+    display: flex;
+    overflow:scroll;
+    width: 80vw;
+    gap: 15px;
+    transition: transform 0.3s;
+}
+.image {
+    width: 15em;
+    height: 20em;
+    object-fit: cover;
+    object-position: center;
+}
+.image:first-child{
+    margin-left: 5em;
+}
+
+/*  ------------------------------ CONTACT  ------------------------------  */
 
 .contact{
     background-color: rgba(8, 6, 32, 1);
@@ -159,16 +184,6 @@ text-align: justify;
     justify-content: center;
     gap: 1em;
     align-items: center;
-}
-.titleSection{ 
-    color: white;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top  : 2em;
-    height: 35vh;
 }
 
 form {
