@@ -204,15 +204,15 @@ text-align: justify;
 #trait{
     width: 50px;
     border: 1px solid white;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
-
 
 .imageContainer {
     padding: 0;
     margin: 0;
-    width: 15em ;
+    width: 205px ;
     height: 320px;
+    border : 1px solid gray;
 }
 
 /*  ------------------------------ CONTACT  ------------------------------  */
