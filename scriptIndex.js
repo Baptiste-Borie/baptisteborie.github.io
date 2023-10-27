@@ -78,3 +78,16 @@ form.addEventListener('submit',function(event){
     alert(" This section is currently empty and doesnt work cause PHP or any server-side languages is not supported on GITHUB Pages. You can still reach me at baptisteboriepro@gmail.com");
 })
 
+/* Bouton de contexte d'image */
+var boutons = document.querySelectorAll(".bouton-redirection");
+
+// Ajoutez un gestionnaire d'événements pour chaque bouton
+boutons.forEach(function(bouton) {
+    console.log("dd");
+    bouton.addEventListener("click", function() {
+        setTimeout(function(){
+            var url = bouton.getAttribute("data-url");
+            window.location.href = url;
+        },50)
+    });
+});

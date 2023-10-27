@@ -161,6 +161,7 @@ text-align: justify;
 #imageTrack{
     display: flex;
     overflow:scroll;
+    overflow-y: hidden;
     width: 80vw;
     gap: 15px;
     transition: transform 0.3s;
@@ -170,11 +171,46 @@ text-align: justify;
     height: 20em;
     object-fit: cover;
     object-position: center;
+    opacity: 1;
 }
-.image:first-child{
+.imageContainer:first-child{
     margin-left: 5em;
 }
+.imageContext {
+    background-color: rgba(41, 33, 33, 0.5);
+    width: 15em;
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+.imageContainer:hover > .imageContext{
+    transition: 0.5s;
+    transform: translateY(-100%);
+}
 
+.imageContainer {
+    padding: 0;
+    margin: 0;
+    width: 15em ;
+    height: 320px;
+}
+
+.bouton-redirection {
+    background-color: rgb(85, 0, 255);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border : 0;
+    width: 100px;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.bouton-redirection:active {
+    background-color: rgb(54, 26, 110);
+}
 /*  ------------------------------ CONTACT  ------------------------------  */
 
 .contact{
