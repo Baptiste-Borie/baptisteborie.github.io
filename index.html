@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baptiste Borie</title>
     <link rel="stylesheet" href="styleIndex.css">
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
 
 </head>
 
@@ -53,19 +53,27 @@
                 </div>
                 <div id = "imageTrack" >
                     <div class = "imageContainer" data-url="button/clickhere.html">
-                        <img class ="image"alt="buttonPages" src="assets/img/pressMe.png" >
+                        <img class ="image" alt="buttonPages" src="assets/img/pressMe.png" >
                         <div class ="imageContext">
                             <h4>Button librairy</h4>
-                            <div id="trait"></div>
+                            <div class="trait"></div>
                             Many buttons and many styles !
                         </div>
                     </div>
-                    <div class = "imageContainer" data-url="Art/flower_pot/flowerpot.html">
-                        <img class ="image"alt="buttonPages" src="assets/img/flowerPot.png" >
+                    <div class = "imageContainer" data-url="Art/galerie.html">
+                        <img class ="image" alt="GalleryImage" src="assets/img/flowerPot.png" >
                         <div class ="imageContext">
                             <h4>Art Gallery</h4>
-                            <div id="trait"></div>
+                            <div class="trait"></div>
                             Pure css Art !
+                        </div>
+                    </div>
+                    <div class = "imageContainer" data-url="Art/vague/vague.html">
+                        <img class ="image" alt="WaveImage" src="assets/img/vague.png" >
+                        <div class ="imageContext">
+                            <h4>The Great Wave off Kanagawa</h4>
+                            <div class="trait"></div>
+                                A 8-bit reproduction of the great woodblock print made by Hokusai.
                         </div>
                     </div>                    
                 </div>
@@ -80,30 +88,27 @@
                     </div>
                 </div>
                 <div class = "formContainer">
-                    <form action="" id="form">
+                    <form id="form">
                         <ul>
-                            <div>Nom : </div>
+                            <li>Nom : </li>
                             <li>
-                                <input type="text" id="name" name="user_name" placeholder="Name"/>
+                                <input type="text" id="name" name="user_name" placeholder="Name">
                             </li>
-                            <div>Email :</div>
+                            <li>Email :</li>
                             <li>
-                                <input type="email" id="mail" name="user_email" placeholder="Email"/>
+                                <input type="email" id="mail" name="user_email" placeholder="Email">
                             </li>
-                            <div>Message : </div>
+                            <li>Message : </li>
                             <li>
                                 <textarea id="msg" name="user_message" placeholder="Message "></textarea>
                             </li>
                         </ul>
-                        <button type="submit" role="button" class = "button">
+                        <button type="submit" class = "button">
                                 <span>Send</span>
                         </button>                           
                     </form>
                     </div>
             </div>
-        </div>
-        <div style="display: none;">
-            Irma <3
         </div>
 <script src="scriptIndex.js" type="module"></script>
 </body>

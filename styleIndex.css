@@ -180,7 +180,6 @@ text-align: justify;
     background-color: rgba(41, 33, 33, 0.5);
     color: white;
     height: 325px;
-    width: 205px;
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -188,6 +187,7 @@ text-align: justify;
     user-select: none;
     cursor: pointer;
     backdrop-filter: blur(10px);
+    padding: 5px;
 }
 .imageContext h4 {
     font-size: 1.5em;
@@ -201,7 +201,7 @@ text-align: justify;
     transition: 0.5s;
     transform: translateY(100%);
 }   
-#trait{
+.trait{
     width: 50px;
     border: 1px solid white;
     margin-bottom: 15px;
@@ -251,7 +251,7 @@ form {
 .formContainer textarea{
     padding-top: 20px ;
 }
-.formContainer  div {
+.formContainer  li {
     color : #858fac;
 }
 
