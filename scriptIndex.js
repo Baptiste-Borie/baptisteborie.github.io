@@ -1,6 +1,6 @@
 
 /* Ajout du style dans la banniere. */
-document.addEventListener('scroll', function() {
+/* document.addEventListener('scroll', function() {
     var welcomeSection = document.querySelector('.welcome');
     var workSection = document.querySelector('.work'); 
     var navBar = document.getElementById('nav');
@@ -17,7 +17,7 @@ document.addEventListener('scroll', function() {
     } else {
         navBar.classList.remove('navColor');
     }
-});
+}); */
 
 
 /* Smooth scrolling e */
