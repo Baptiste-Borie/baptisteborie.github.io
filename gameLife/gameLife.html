@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of life</title>
+    <style>
+        .row {
+            display: flex;
+        }
+    
+        .cell {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #929191;
+            margin: 1px;
+            cursor: pointer;
+        }
+    
+        .alive {
+            background-color: #333;
+        }
+    
+        .dead {
+            background-color: #fff;
+        }
+
+        #grid-container {
+            /*border: 5px solid #929191;*/
+        }
+    </style>
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div id="menu">
+        <label for="rowsInput">Nombre de lignes:</label>
+        <input type="number" id="rowsInput" value="30">
+        <label for="colsInput">Nombre de colonnes:</label>
+        <input type="number" id="colsInput" value="30">
+        <div>
+            <button id="startBtn">Démarrer la simulation</button>
+            <button id="stopBtn">Arrêter la simulation</button>
+            <button id="updateBtn">Mettre à jour la grille</button>    
+        </div>
+        <div id="generationCount">Génération : 0</div>
+    </div>
+    <div id="grid-container"></div>
+</body>
+</html>
