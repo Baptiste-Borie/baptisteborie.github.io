@@ -39,7 +39,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 /* Progress Dots */
 const indicators = document.querySelectorAll(".progressDots");
-const sections = ["welcome", "work", "contact"];
+const sections = ["welcome", "work","ability", "contact"];
 
 window.addEventListener("scroll", () => {
     const windowHeight = window.innerHeight;

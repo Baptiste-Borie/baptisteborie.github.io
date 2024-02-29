@@ -23,6 +23,7 @@ function createGrid() {
             grid[i][j] = false;
         }
     }
+    calcDim(grid);
     return grid;
 }
 
@@ -48,8 +49,10 @@ function toggleCell(grid, row, coll) {
     renderGrid(grid, gridContainer);
 }
 
+
 function updateGrid() {
     grid = createGrid();
+    calcDim(grid);
     renderGrid(grid, gridContainer);
 }
 
@@ -134,3 +137,20 @@ let simulationInterval;
         generationCount = 0; // Réinitialisation du compteur de génération lors de l'arrêt de la simulation
     }
     renderGrid(grid, gridContainer);
+
+    /* ---------- Fonction annexe ---------- */
+
+    function calcDim(grid){
+        const cellSize = 20; // Taille d'une cellule en pixels
+        const rows = grid.length;
+        const cols = grid[0].length;
+        
+        let width = cols * cellSize + 'px';
+        let height = rows  * cellSize + 'px';
+        console.log(height);
+        console.log(width);
+    
+        gridContainer.style.width = width;
+        gridContainer.style.height = height;
+    }
+    
