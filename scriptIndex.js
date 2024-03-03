@@ -20,16 +20,14 @@
 }); */
 
 
-/* Smooth scrolling e */
+/* Smooth scrolling */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
         const targetId = this.getAttribute('href').substring(1);
         const sectionWork = document.getElementById(targetId);
-        console.log(sectionWork);
-        console.log(targetId);
-        if (sectionWork) {
+            if (sectionWork) {
             window.scrollTo({
                 top: sectionWork.offsetTop,
                 behavior: 'smooth' 
@@ -39,7 +37,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 /* Progress Dots */
 const indicators = document.querySelectorAll(".progressDots");
-const sections = ["welcome", "work","ability", "contact"];
+const sections = ["welcome", "work", "contact"];
 
 window.addEventListener("scroll", () => {
     const windowHeight = window.innerHeight;
