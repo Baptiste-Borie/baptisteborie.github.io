@@ -1,134 +1,359 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Devoir à la maison</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styleMobile.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baptiste Borie</title>
-    <link rel="stylesheet" href="style/styleIndex.css">
-    <link rel="stylesheet" href="style/welcome.css">
-    <link rel="stylesheet" href="style/work.css">
-    <link rel="stylesheet" href="style/contact.css">
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+  <body>
+    <div class="container">
+      <header class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/logo_msp_Part.png" width="365" height="73" />
+          </div>
 
-</head>
+          <div role="search" id="recherche_conteneur" class="col-md-6">
+            <form
+              action="https://mon.service-public.fr/portail/faces/jsp/liste_res_tout.jsp"
+              method="get"
+            >
+              <input
+                type="text"
+                name="fullText"
+                id="rechercheInput"
+                value="Rechercher"
+                title="Rechercher"
+              />
+              <input
+                type="submit"
+                value="ok"
+                title="Lancer la recherche"
+                id="ok_recherche"
+              />
+            </form>
+          </div>
+        </div>
+      </header>
 
-<body>
-    <nav id="nav">
+      <nav>
         <ul>
-            <li>
-                <div>
-                    Baptiste Borie
-                </div>
-            </li>
-            <li>
-                <div><a href="#welcome">Me</a></div>
-            </li>
-            <li>
-                <div><a href="#work">Work</a></div>
-            </li>
-            <li>
-                <div><a href="#contact">Contact</a></div>
-            </li>
+          <li class="navLi">
+            <a href="/jsp/en_savoir_plus_mon_tableau_de_bord.jsp"
+              >Mon tableau de bord</a
+            >
+            <ul>
+              <li>
+                <a href="jsp/mes_liaisons.jsp">&gt; Mes liaisons de comptes</a>
+              </li>
+              <li><a href="jsp/mon_calendrier.jsp">&gt; Mon calendrier</a></li>
+              <li><a href="jsp/mon_suivi.jsp">&gt; Mon suivi</a></li>
+            </ul>
+            <span class="flecheActive"></span>
+          </li>
+          <li class="navLi">
+            <a href="/jsp/en_savoir_plus_mes_documents.jsp">Mes documents</a>
+            <ul>
+              <li>
+                <a href="jsp/msp_documents.jsp">&gt; Mon porte-documents</a>
+              </li>
+              <li><a href="jsp/bloc_note.jsp">&gt; Mon bloc-notes</a></li>
+            </ul>
+          </li>
+          <li class="navLi">
+            <a href="jsp/en_savoir_plus_mon_profils.jsp">Mon profil</a>
+            <ul>
+              <li><a href="jsp/mon_etat_civil.jsp">&gt; Mes coordonnées</a></li>
+              <li><a href="jsp/ma_communaute.jsp">&gt; Mes contacts</a></li>
+              <li><a href="jsp/mes_options.jsp">&gt; Mes options</a></li>
+            </ul>
+          </li>
+          <li class="navLi">
+            <a href="jsp/en_savoir_plus_catalogue_des_services.jsp"
+              >Catalogue des services</a
+            >
+            <ul>
+              <li>
+                <a href="jsp/les_demarches.jsp?menu=true">&gt; Les démarches</a>
+              </li>
+              <li>
+                <a href="jsp/les_formulaires.jsp?menu=true"
+                  >&gt; Les formulaires CERFA</a
+                >
+              </li>
+              <li>
+                <a href="hjsp/les_partenaires.jsp?menu=true"
+                  >&gt; Les organismes partenaires</a
+                >
+              </li>
+              <li>
+                <a href="http://lannuaire.service-public.fr/" target="_blank"
+                  >&gt; L'annuaire de l'administration</a
+                >
+              </li>
+              <li>
+                <a href="http://www.service-public.fr/" target="_blank"
+                  >&gt; Le guide des droits et démarches</a
+                >
+              </li>
+            </ul>
+          </li>
         </ul>
-    </nav>
-    <div class="mainScreen">
-        <div class="progressDotsBox">
-            <div class="progressDots active"></div>
-            <div class="progressDots"></div>
-            <div class="progressDots"></div>
-        </div>        
-        <div class="section about">
-            <div class="welcome" id ="welcome">
-                    <h2>Welcome</h2>
-                    <div>
-                        Hi i'm Baptiste Borie. Student in computer science you will find on this website a showcase of my
-                        work and my universe.
-                    </div>
-                </div>
+      </nav>
+
+      <ul id="location">
+        <li><a href="https://mon.service-public.fr/portail/">Accueil</a></li>
+        <li>&nbsp;&gt;&nbsp;Mon tableau de bord</li>
+      </ul>
+
+      <section>
+        <main>
+          <h1>Mon tableau de bord</h1>
+          <div id="intro">
+            Découvrez ci-dessous ce que vous pouvez faire dans la rubrique « Mon
+            tableau de bord ».
+          </div>
+          <div id="content">
+            <div class="carroussel">
+              <a href="jsp/mes_liaisons.jsp"
+                ><img
+                  src="img/402_429_Liaisons.JPG"
+                  width="60"
+                  height="60"
+                />Mes liaisons de comptes</a
+              >
+              <ul>
+                <li>
+                  Accédez d'un clic à vos comptes administratifs sans ressaisir
+                  vos identifiants et mots de passe.
+                </li>
+                <li>Gérez vos liaisons de comptes.</li>
+              </ul>
+            </div>
+            <div class="carroussel">
+              <a href="jsp/mon_calendrier.jsp"
+                ><img
+                  src="img/605_403_418_picto_agenda.gif"
+                  width="60"
+                  height="60"
+                />Mon calendrier
+              </a>
+              <ul>
+                <li>
+                  Notez et visualisez toutes vos échéances administratives.
+                </li>
+                <li>
+                  Recevez des alertes par courriel pour vos rappels d'échéances.
+                </li>
+              </ul>
+            </div>
+            <div class="carroussel">
+              <a href="jsp/mon_suivi.jsp"
+                ><img src="img/401_430_suivi.jpg" width="60" height="60" />Mon
+                suivi
+              </a>
+              <ul>
+                <li>Suivez l'avancement de vos démarches en ligne.</li>
+                <li>Consultez les messages envoyés.</li>
+              </ul>
+            </div>
+          </div>
+        </main>
+
+        <aside>
+          <div>
+            <h3>LES ASTUCES</h3>
+            <section class="asideContent">
+              <ul>
+                <li>
+                  <a
+                    href="jsp/authent/page_detail_astuce_MSP.jsp?idAstuce=1001"
+                    target="_self"
+                    title="Lien vers Accédez depuis mon.service-public.fr à une nouvelle génération de démarches en ligne"
+                    >Accédez depuis mon.service-public.fr à une nouvelle
+                    génération de démarches en ligne</a
+                  >
+                </li>
+              </ul>
+              <div>
+                <a href="jsp/authent/toutes_astuces_msp.jsp"
+                  >Toutes les astuces</a
+                >
+              </div>
+            </section>
+          </div>
+          <div>
+            <h3>Les actualités</h3>
+            <section class="asideContent">
+              <ul>
+                <li>
+                  <a
+                    href="jsp/authent/page_detail_actualite_MSP.jsp?idActu=11644"
+                    title="Lien vers Votre avis nous intéresse…"
+                    ><span class="date">22/10/2012</span> Que pensez-vous de MSP
+                    ?</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="jsp/authent/page_detail_actualite_MSP.jsp?idActu=11823"
+                    title="Lien vers Une nouvelle démarche dans le Tarn"
+                    ><span class="date">10/10/2012</span> Le Conseil général du
+                    Tarn vient de déployer, une nouvelle téléprocédure .</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="jsp/authent/page_detail_actualite_MSP.jsp?idActu=11643"
+                    title="Lien vers Déclarez en ligne le décès d'un proche "
+                    ><span class="date">30/07/2012</span> Une nouvelle démarche
+                    en ligne sur MSP</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="jsp/authent/page_detail_actualite_MSP.jsp?idActu=11631"
+                    title="Lien vers Pour les départements numérotés de 50 à 974 il ne vous reste que quelques jours pour télé-déclarer vos revenus"
+                    ><span class="date">15/06/2012</span> Accédez à votre
+                    déclaration de revenus depuis MSP</a
+                  >
+                </li>
+              </ul>
+              <div>
+                <a href="jsp/authent/tout_actualites_msp.jsp"
+                  >Toutes les actualités</a
+                >
+              </div>
+            </section>
+          </div>
+        </aside>
+      </section>
+
+      <footer>
+        <div>
+          <ul id="footer_content">
+            <li>
+              <span
+                ><a
+                  href="http://www.ojd-internet.com/chiffres-internet/7111-service-public.fr"
+                  target="_blank"
+                  ><img src="img/logo-ojd.png" alt="logo du OJD" /></a
+              ></span>
+            </li>
+            <li>
+              <p>Assistance et contact</p>
+              <ul class="footer_subList">
+                <li>
+                  <a href="jsp/authent/plan_du_site.jsp" target="_self"
+                    ><span title="">Plan du site</span></a
+                  >
+                </li>
+                <li>
+                  <a href="jsp/authent/contact.jsp" target="_self"
+                    ><span title="">Contact</span></a
+                  >
+                </li>
+                <li>
+                  <a href="jsp/authent/aide.jsp" target="_self"
+                    ><span title="">Aide</span></a
+                  >
+                </li>
+                <li>
+                  <a href="jsp/authent/faqs.jsp" target="_self"
+                    ><span title="">Questions fréquentes</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>Informations légales</p>
+              <ul class="footer_subList">
+                <li>
+                  <a href="jsp/authent/mentions_legales.jsp"
+                    ><span title="">Mentions légales</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="jsp/authent/conditions_generales_utilisation.jsp"
+                    target="_self"
+                    ><span title="">Conditions générales d'utilisation</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.service-public.fr/%C3%A0-propos-du-site/001371.html"
+                    target="_blank"
+                    ><span
+                      title="Répertoire des informations publiques - Nouvelle fenêtre"
+                      >Répertoire des informations publiques</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>Qualité de service</p>
+              <ul class="footer_subList">
+                <li>
+                  <a href="jsp/authent/accessibilite.jsp"
+                    ><span title="">Accessibilité</span></a
+                  >
+                </li>
+                <li>
+                  <a href="jsp/authent/securite.jsp"
+                    ><span title="">Sécurité</span></a
+                  >
+                </li>
+                <li>
+                  <a href="jsp/authent/engagement_qualite.jsp"
+                    ><span title="">Engagement qualité</span></a
+                  >
+                </li>
+                <li>
+                  <a href="jsp/authent/statistiques.jsp"
+                    ><span title="">Statistiques</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>Partenariat</p>
+              <ul class="footer_subList">
+                <li>
+                  <a href="jsp/authent/partenaires.jsp"
+                    ><span title="">Nos organismes partenaires</span></a
+                  >
+                </li>
+                <li>
+                  <a href="jsp/authent/devenir_partenaire.jsp"
+                    ><span title="">Devenir partenaire ?</span></a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="section work" id = work>
-            <div class ="titleSection">
-                <h2>My work</h2>
-                <div>
-                    You can find here some creations that I have made.
-                </div>
-            </div>
-                <div id = "imageTrack" >
-                <div class = "imageContainer" data-url="button/clickhere.html">
-                    <img class ="image" alt="buttonPages" src="assets/img/pressMe.png" >
-                    <div class ="imageContext">
-                        <h4>Button librairy</h4>
-                        <div class="trait"></div>
-                        Many buttons and many styles !
-                    </div>
-                </div>
-                <div class = "imageContainer" data-url="Art/galerie.html">
-                    <img class ="image" alt="GalleryImage" src="assets/img/flowerPot.png" >
-                    <div class ="imageContext">
-                        <h4>Art Gallery</h4>
-                        <div class="trait"></div>
-                        Pure css Art !
-                    </div>
-                </div>
-                <div class = "imageContainer" data-url="Art/vague/vague.html">
-                    <img class ="image" alt="WaveImage" src="assets/img/vague.png" >
-                    <div class ="imageContext">
-                        <h4>The Great Wave off Kanagawa</h4>
-                        <div class="trait"></div>
-                            A 8-bit reproduction of the great woodblock print made by Hokusai.
-                    </div>
-                </div>
-                <div class = "imageContainer" data-url="gameLife/gameLife.html">
-                    <img class ="image" alt="WaveImage" src="assets/img/gameLife.png    " >
-                    <div class ="imageContext">
-                        <h4>The game of life</h4>
-                        <div class="trait"></div>
-                            A small implementation of the game of life by Conway.
-                    </div>
-                </div>
-                <div class = "imageContainer" data-url="first-website/accueil.html">
-                    <img class ="image" alt="WaveImage" src="assets/img/firstwebsite.png" >
-                    <div class ="imageContext">
-                        <h4>First website</h4>
-                        <div class="trait"></div>
-                            My first website made with HTML and CSS, 3 years ago. 
-                    </div>
-                </div>          
-            </div>
+        <div>
+          <a target="_blank" href="jsp/authent/a_propos_de_la_DGME.jsp"
+            >Tous droits réservés - Direction Générale de Modernisation de
+            l'Etat - 2012
+          </a>
+          |
+          <a title="A propos du site" href="jsp/authent/a_propos_du_site.jsp"
+            >A propos de mon.service-public.fr</a
+          >
         </div>
-        <div class="section contact" id = "contact">
-            <div class = "titleSection">
-                <div>
-                    <H2>Contact Me !</H2>
-                </div>
-                <div> 
-                    Feel free to contact me for any informations ! 
-                </div>
-            </div>
-            <div class = "formContainer">
-                <form id="form">
-                    <ul>
-                        <li>Nom : </li>
-                        <li>
-                            <input type="text" id="name" name="user_name" placeholder="Name">
-                        </li>
-                        <li>Email :</li>
-                        <li>
-                            <input type="email" id="mail" name="user_email" placeholder="Email">
-                        </li>
-                        <li>Message : </li>
-                        <li>
-                            <textarea id="msg" name="user_message" placeholder="Message "></textarea>
-                        </li>
-                    </ul>
-                    <button type="submit" class = "button">
-                            <span>Send</span>
-                    </button>                           
-                </form>
-                </div>
-            </div>
-        </div>
-<script src="scriptIndex.js" type="module"></script>
-</body>
+      </footer>
+    </div>
+  </body>
 </html>

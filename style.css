@@ -1,0 +1,225 @@
+:root {
+  --dark-blue: #205597;
+  --very-dark-blue: #24167d;
+  --footer-color: #1b7dd6;
+  --light-blue: #f0f6f8;
+  --red: #a31f00;
+}
+.container {
+  margin: 15px;
+}
+
+a {
+  text-decoration: none !important;
+  color: var(--dark-blue) !important;
+}
+
+#recherche_conteneur {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  background: linear-gradient(#cadce6, #ffffff, #cadce6, #cadce6);
+  font-size: x-large;
+  text-decoration: none;
+}
+
+.navLi {
+  flex-grow: 1;
+  position: relative; /* Important pour positionner les sous-menus par rapport à l'élément parent */
+  border-bottom: 2px solid var(--dark-blue);
+}
+
+.navLi:hover ul {
+  display: block;
+}
+
+.navLi:hover > a {
+  color: #3480ff;
+  text-decoration: underline;
+}
+
+.navLi > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid rgb(152, 151, 151);
+  padding: 1em;
+}
+
+.navLi:last-child > a {
+  border-right: 0;
+}
+
+.navLi > ul {
+  display: none;
+  position: absolute;
+  font-size: medium;
+  padding: 2%;
+  top: 105%; /* Fait apparaître le sous-menu juste en dessous  */
+  /*  105 car 100% de la largeur du parent + 2 de padding et 1 de la border et 2 pour le petit *espace entre le sous-menu et le menu  */
+  left: 0;
+  width: 95%; /* Assure que le sous-menu a la même largeur que l'élément parent  */
+  /* 95 car 100 de la largeur du parent - 2 de padding right et 2 de padding left - 1 de la border */
+  background-color: #edf2f7;
+  z-index: 100; /* Pour s'assurer que le sous-menu est au-dessus des autres éléments */
+}
+
+#location,
+#location a {
+  color: var(--dark-blue);
+  display: flex;
+  flex-direction: row;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main > h1 {
+  background-color: var(--dark-blue);
+  padding: 0.5em 0 0.5em 1em;
+  font-size: 20px;
+  border-radius: 15px 15px 0 0;
+  color: white;
+  margin: 0;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--light-blue);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0px 3px #d9d9d9;
+}
+
+#intro {
+  color: var(--dark-blue);
+}
+
+.carroussel {
+  padding: 10px;
+}
+.carroussel > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+/* -----------------ASIDE ---------------------*/
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+aside > div > h3 {
+  color: white;
+  padding: 0.85em 0 0.85em 1em;
+  border-radius: 10px 10px 0 0;
+  font-size: 15px;
+  margin: 0;
+}
+
+aside > div:first-child > h3 {
+  background-color: var(--dark-blue);
+}
+
+aside > div:last-child > h3 {
+  background-color: var(--red);
+  text-transform: uppercase;
+}
+
+aside li > a {
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+}
+
+aside div > a:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.asideContent {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  background-color: var(--light-blue);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 3px #d9d9d9;
+}
+
+.asideContent span {
+  color: var(--red);
+  padding-right: 5px;
+}
+
+aside div:nth-of-type(2) > .asideContent > div > a {
+  color: var(--red) !important;
+}
+
+aside ul {
+  padding: 0;
+}
+
+/* ---------------------- Footer ---------------- */
+footer {
+  background-color: var(--footer-color);
+  color: white;
+  margin-top: 2em;
+}
+
+#footer_content {
+  width: 75%;
+}
+
+footer > div:last-child {
+  background-color: var(--very-dark-blue);
+}
+
+footer > div:last-child * {
+  color: white !important;
+}
+
+#footer_content {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.footer_subList {
+  list-style-type: disc;
+  color: #3db5ff;
+}
+
+.footer_subList a {
+  color: white !important;
+}
+
+footer > div:last-child {
+  user-select: none;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  color: var(--very-dark-blue);
+  justify-content: center;
+  gap: 1em;
+  padding: 0.5em;
+}
