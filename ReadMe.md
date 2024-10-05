@@ -28,7 +28,7 @@ Pour le reste de la page j'ai beaucoup utilisé `display : flex`et tout ses vari
 
 Flexbox me permet notamment de très peu utilisé les règles `height` et `width`. Il existe un seul endroit ou j'ai joué avec les largeurs et les positions c'est pour les sous-menus. La règle CSS correspondante est `.navLi > ul` mais j'ai détaillé dans le code les choix et les calculs fait pour bien aligné ces sous menus.
 
-Un des gros avantages de Flexbox est également la gestion du style pour mobile. Il me suffit de passer les élements
+Un des gros avantages de Flexbox est également la gestion du style pour mobile. Il me suffit de passer les élements de `row`à `column`.
 
 Comme beaucoup de couleur se répétait j'ai fait le choix de défini un "set" de couleur pour la page :
 
@@ -54,3 +54,17 @@ Je vais donc faire une explication rapide du style de la page :
 - L'élément `main` est une flexBox disposé lui en colonne. Il contient à l'intérieur d'autres élément flexBox.
 - L'élément `aside` est une flexBox disposé en colonne également. Afin de cibler les différents div pour les couleurs j'ai utilisé les éléments `:first-child` et `:last-child` ainsi que d'autre selecteurs.
 - L'élément `footer` a une largeur défini à `75%`. Sinon c'est également une flexBox dans lequel les éléments sont disposés sur une ligne. J'ai réutilisé `:last-child` afin de sélectionner la dernière div.
+
+# Responsive
+
+Afin de gagné légerement en clareté dans le projet j'ai décidé de faire le style à part dans le fichier `styleMobile.css`.
+
+J'estime le screen être à une largeur d'environ `385px`. Mais afin de ne pas avoir de problème d'affichage j'ai choisi de passer en mode "mobile" à partir de `768px`.
+
+Comme mentionné précédemment beaucoup d'élément changent l'orientation de la flexBox de ligne à colonne lors de ce changement de mode.
+
+Je réajuste certaine largeur également comme les menus qui était fixe.
+
+## Bonus
+
+J'ai également mis en place pour le responsive le menu déroulant. Cela m'as demandé d'ajouter un peu de javascript pour l'événement de clique.

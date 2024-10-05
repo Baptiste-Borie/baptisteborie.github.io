@@ -6,4 +6,46 @@
   #footer_content {
     flex-direction: column;
   }
+
+  .navLi {
+    width: 100%;
+  }
+  .navLi > a {
+    border: 0;
+  }
+
+  .carroussel {
+    width: 100%;
+  }
+
+  .carroussel > a {
+    justify-content: center;
+  }
+
+  main > h1 {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  aside > div > h3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  #footer_content {
+    width: 100%;
+  }
+
+  footer > div:last-child {
+    font-size: 10px;
+  }
+
+  nav > ul {
+    display: none;
+  }
+
+  .bi-list {
+    display: block;
+  }
 }

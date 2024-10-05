@@ -6,7 +6,8 @@
   --red: #a31f00;
 }
 .container {
-  margin: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 a {
@@ -18,7 +19,11 @@ ul,
 ol {
   list-style: none;
 }
+/* ------------- Header ------------- */
 
+header {
+  background: linear-gradient(#f3f5fa, #ffffff, #ffffff, #ffffff, #f3f5fa);
+}
 /* ------------- Navigation ------------ */
 nav > ul {
   display: flex;
@@ -33,6 +38,7 @@ nav > ul {
   flex-grow: 1;
   position: relative; /* Important pour positionner les sous-menus par rapport à l'élément parent */
   border-bottom: 2px solid var(--dark-blue);
+  width: 25%;
 }
 
 .navLi > a {
@@ -52,11 +58,10 @@ nav > ul {
   position: absolute;
   font-size: medium;
   padding: 2%;
-  top: 105%; /* Fait apparaître le sous-menu juste en dessous  */
-  /*  105 car 100% de la largeur du parent + 2 de padding et 1 de la border et 2 pour le petit *espace entre le sous-menu et le menu  */
+  top: 102%; /* Fait apparaître le sous-menu juste en dessous  */
+  /*  102 car 100% de la largeur du parent + 2 de padding */
   left: 0;
-  width: 95%; /* Assure que le sous-menu a la même largeur que l'élément parent  */
-  /* 95 car 100 de la largeur du parent - 2 de padding right et 2 de padding left - 1 de la border */
+  width: 100%;
   background-color: #edf2f7;
   z-index: 100; /* Pour s'assurer que le sous-menu est au-dessus des autres éléments */
 }
@@ -106,7 +111,8 @@ main > h1 {
 }
 
 .carroussel {
-  padding: 10px;
+  padding: 15px 25px 15px 25px;
+  width: 33%;
 }
 .carroussel > a {
   display: flex;
@@ -158,7 +164,7 @@ aside div > a:last-child {
 .asideContent {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 2em 1em 1em;
   background-color: var(--light-blue);
   border-radius: 0 0 10px 10px;
   box-shadow: 0px 3px #d9d9d9;
@@ -218,6 +224,13 @@ footer > div:last-child {
   display: flex;
   color: var(--very-dark-blue);
   justify-content: center;
+  letter-spacing: 1px;
   gap: 1em;
   padding: 0.5em;
+}
+
+/* ------- Menu burger ------- */
+
+.bi-list {
+  display: none;
 }

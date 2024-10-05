@@ -16,16 +16,18 @@
 
   <body>
     <div class="container">
-      <header class="container">
+      <header class="container m-0">
         <div class="row">
-          <div class="col-md-6 d-md-block d-sm-flex justify-content-sm-center">
+          <div
+            class="col-md-6 d-md-block d-sm-flex justify-content-sm-center p-0"
+          >
             <img src="img/logo_msp_Part.png" width="365" height="73" />
           </div>
 
           <div
             role="search"
             id="recherche_conteneur"
-            class="col-md-6 d-flex justify-content-md-end justify-content-center align-items-center"
+            class="col-md-6 d-flex justify-content-md-end justify-content-center align-items-center p-0"
           >
             <form
               action="https://mon.service-public.fr/portail/faces/jsp/liste_res_tout.jsp"
@@ -50,6 +52,19 @@
       </header>
 
       <nav>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
         <ul>
           <li class="navLi">
             <a href="/jsp/en_savoir_plus_mon_tableau_de_bord.jsp"
@@ -360,4 +375,11 @@
       </footer>
     </div>
   </body>
+  <script>
+    const burger = document.querySelector(".bi-list");
+    const navUl = document.querySelector("nav > ul");
+    burger.addEventListener("click", () => {
+      navUl.style.display = navUl.style.display === "flex" ? "none" : "flex";
+    });
+  </script>
 </html>
