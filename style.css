@@ -14,17 +14,12 @@ a {
   color: var(--dark-blue) !important;
 }
 
-#recherche_conteneur {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
 ul,
 ol {
   list-style: none;
 }
 
+/* ------------- Navigation ------------ */
 nav > ul {
   display: flex;
   flex-direction: row;
@@ -38,15 +33,6 @@ nav > ul {
   flex-grow: 1;
   position: relative; /* Important pour positionner les sous-menus par rapport à l'élément parent */
   border-bottom: 2px solid var(--dark-blue);
-}
-
-.navLi:hover ul {
-  display: block;
-}
-
-.navLi:hover > a {
-  color: #3480ff;
-  text-decoration: underline;
 }
 
 .navLi > a {
@@ -75,12 +61,24 @@ nav > ul {
   z-index: 100; /* Pour s'assurer que le sous-menu est au-dessus des autres éléments */
 }
 
+.navLi:hover ul {
+  display: block;
+}
+
+.navLi:hover > a {
+  color: #3480ff;
+  text-decoration: underline;
+}
+
+/* ------------ Location ------- */
 #location,
 #location a {
   color: var(--dark-blue);
   display: flex;
   flex-direction: row;
 }
+
+/* ---------- Main Content ---------- */
 main {
   display: flex;
   flex-direction: column;

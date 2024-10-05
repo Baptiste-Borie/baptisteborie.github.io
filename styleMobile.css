@@ -1,8 +1,4 @@
 @media screen and (max-width: 768px) {
-  #recherche_conteneur {
-    justify-content: flex-start;
-  }
-
   nav > ul,
   .navLi > a,
   #content,
